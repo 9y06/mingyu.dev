@@ -68,12 +68,12 @@ body.force-dark {
 .desc {
     animation-name: txtanimate;
     font-size: 30px;
-    font-weight: 300;
+    font-weight: 200;
 }
 .name {
     animation-name: txtanimate;
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 600;
 }
 .nameBox{
     display: inline-block;
