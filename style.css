@@ -1,4 +1,5 @@
 @import "https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css";
+
 html {
     overflow: hidden;
     background-position: center;
@@ -11,25 +12,30 @@ html {
     justify-content: center;
     background-attachment: fixed;
 }
+
 body {
     background-color: #f5f5f5;
     color: #111111;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #111111;
         color: #f5f5f5;
     }
 }
+
 body.force-light {
     background-color: #f5f5f5 !important;
     color: #111111 !important;
 }
+
 body.force-dark {
     background-color: #111111 !important;
     color: #f5f5f5 !important;
 }
+
 .link {
     width: 74px;
     height: 74px;
@@ -39,10 +45,18 @@ body.force-dark {
     background-color: transparent;
     transform: scale(1);
     opacity: 1;
-    transition-duration: 0.2s;
+    transition: all 0.2s ease;
     text-decoration: none;
     animation-name: linkanimate;
+    filter: brightness(1);
 }
+
+.link:active {
+    transform: scale(0.9);
+    filter: brightness(0.7);
+    transition: all 0.1s ease;
+}
+
 .body {
     animation-name: linkanimate;
     display: flex;
@@ -53,35 +67,44 @@ body.force-dark {
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 24px;
 }
+
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .dock {
     display: flex;
 }
+
 .image {
     border-radius: 15px;
     width: 74px;
+    transition: inherit;
 }
+
 .desc {
     animation-name: txtanimate;
     font-size: 30px;
     font-weight: 200;
 }
+
 .name {
     animation-name: txtanimate;
     font-size: 30px;
     font-weight: 600;
 }
+
 .nameBox{
     display: inline-block;
 }
+
 .head {
     font-family: "Pretendard";
     padding-bottom: 10px;
 }
+
 @media screen and (max-width: 750px) {
     body {
         -webkit-user-select: none !important;
@@ -119,6 +142,12 @@ body.force-dark {
         opacity: 0.5;
         transform: scale(0.95);
     }
+
+    .link:active {
+        transform: scale(0.85);
+        filter: brightness(0.6);
+        transition: all 0.1s ease;
+    }
     
     .image{
         width: 60px;
@@ -129,6 +158,7 @@ body.force-dark {
         display: block;
     }
 }
+
 @media screen and (min-width: 601px) {
     .link:hover {
         transform: scale(1.1);
@@ -136,17 +166,26 @@ body.force-dark {
         0 4px 4px rgba(0, 0, 0, 0.09), 0 8px 8px rgba(0, 0, 0, 0.09),
         0 16px 16px rgba(0, 0, 0, 0.09), 0 32px 32px rgba(0, 0, 0, 0.09);
     }
+
+    .link:hover:active {
+        transform: scale(1.0);
+        filter: brightness(0.7);
+        transition: all 0.1s ease;
+    }
 }
+
 .link {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.05),
     0 4px 8px rgba(0, 0, 0, 0.05), 0 8px 16px rgba(0, 0, 0, 0.05),
     0 16px 32px rgba(0, 0, 0, 0.05), 0 32px 64px rgba(0, 0, 0, 0.05);
 }
+
 .head {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
     0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
     0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
 }
+
 .body {
     border-color: rgba(255, 255, 255, 0.2);
     border-style: solid;
@@ -155,10 +194,12 @@ body.force-dark {
     0 4px 8px rgba(0, 0, 0, 0.05), 0 8px 16px rgba(0, 0, 0, 0.05),
     0 16px 32px rgba(0, 0, 0, 0.05), 0 32px 64px rgba(0, 0, 0, 0.05);
 }
+
 .animate {
     animation-duration: 1s;
     animation-fill-mode: backwards;
 }
+
 @keyframes linkanimate {
     0% {
         opacity: 0;
@@ -169,6 +210,7 @@ body.force-dark {
         transform: scale(1);
     }
 }
+
 @keyframes txtanimate {
     0% {
         opacity: 0;
@@ -177,6 +219,7 @@ body.force-dark {
         opacity: 1;
     }
 }
+
 .animate.f1 { animation-delay: 0.1s; }
 .animate.f2 { animation-delay: 0.2s; }
 .animate.f3 { animation-delay: 0.3s; }
