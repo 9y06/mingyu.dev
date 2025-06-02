@@ -87,13 +87,13 @@ body.force-dark {
 .desc {
     animation-name: txtanimate;
     font-size: 30px;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .name {
     animation-name: txtanimate;
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .nameBox{
